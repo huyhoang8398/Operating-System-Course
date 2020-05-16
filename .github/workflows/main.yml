@@ -14,8 +14,8 @@ jobs:
       - uses: docker://pandoc/latex:2.9
         with:
           args: |>
-          --pdf-engine=xelatex
-          --output=output/result.pdf ${{ env.FILELIST }}
+            --pdf-engine=xelatex
+            --output=output/result.pdf ${{ env.FILELIST }}
       - uses: actions/upload-artifact@master
         with:
           name: output
