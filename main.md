@@ -1,8 +1,6 @@
 ---
 title: "Operating System - Labwork 1"
-author: \textbf{Mạnh Quốc Dũng} \newline
-        \textit{- HCMC University Of Technology} \newline
-        \textit{- 1852017} 
+author: \textbf{Do Duy Huy Hoang} \newline
 date: "2020-05-16"
 titlepage: true
 ...
