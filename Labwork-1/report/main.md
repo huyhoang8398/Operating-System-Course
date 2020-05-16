@@ -1,3 +1,12 @@
+---
+title: "Operating System - Labwork 1"
+author: \textbf{Mạnh Quốc Dũng} \newline
+        \textit{HCMC University Of Technology} \newline
+        \textit{1852017} 
+date: "2020-05-16"
+titlepage: true
+...
+
 ## Why we need to install kernel-package
 
 Gói kernel phát triển giúp tự động hóa các bước thường quy cần thiết để biên dịch và cài đặt kernel tùy chỉnh.
