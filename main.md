@@ -1,8 +1,8 @@
 ---
 title: "Operating System - Labwork 1"
 author: \textbf{Mạnh Quốc Dũng} \newline
-        \textit{HCMC University Of Technology} \newline
-        \textit{1852017} 
+        \textit{- HCMC University Of Technology} \newline
+        \textit{- 1852017} 
 date: "2020-05-16"
 titlepage: true
 ...
@@ -23,14 +23,14 @@ Bạn có thể biên dịch hạt nhân gốc (the original kernel) trong tệp
 
 ## What is the meaning of other parts, i.e. i386, procsched, and sys procsched?
 
-- [Number]: Tất cả các syscalls được xác định bởi một số duy nhất. Để gọi một syscall, 
+- **Number**: Tất cả các syscalls được xác định bởi một số duy nhất. Để gọi một syscall, 
 chúng ta nói với kernel để gọi syscall theo số của nó chứ không phải bằng tên của nó.
-- i386 : [ABI] : Application Binary Interface - là interface giữa hai chương trình modules, một trong số
+- **i386[ABI]** : Application Binary Interface - là interface giữa hai chương trình modules, một trong số
 đó thường là thư viện hoặc hệ điều hành, ở mức mã máy phổ biến là x64, x32, i386
-- [name] : đây là tên của syscall
-- [entry point] : Điểm truy cập, là tên của hàm để gọi để xử lý syscall. Quy ước đặt tên cho
+- **name** : đây là tên của syscall
+- **entry point** : Điểm truy cập, là tên của hàm để gọi để xử lý syscall. Quy ước đặt tên cho
 hàm này là tên của syscall có tiền tố với sys_. Ví dụ, điểm truy nhập của syscall đọc là sys_read.
-- [compat entry point]: điểm bắt đầu khi gọi hàm thực thi tác vụ khi người dùng sử dụng máy 64bit.
+- **compat entry point**: điểm bắt đầu khi gọi hàm thực thi tác vụ khi người dùng sử dụng máy 64bit.
 
 ## What is the meaning of each line above?
 
@@ -56,6 +56,3 @@ Vì `/usr/include` thuộc quyền sở hữu của root user, và lệnh sudo c
 ## Why we must put -share and -fpic option into gcc command?
 
 Vì mình muốn tạo một file share object, ở đây là `libprocsched.so` cũng như sử dụng shared library này, nên ta cần sử dụng option `-share` và `-fpic` trong gcc (`-share` dùng để generate share lib, conf `-fpic` giúp tạo ra một position independent code với mục đích để sử dụng shared lib).
-
-
-
