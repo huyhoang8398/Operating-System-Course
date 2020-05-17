@@ -5,6 +5,7 @@ date: "2020-05-16"
 titlepage: true
 ...
 
+\newline
 # I. Prepare Linux Kernel
 
 ## Preparation
@@ -28,7 +29,7 @@ Bạn có thể biên dịch hạt nhân gốc (the original kernel) trong tệp
 - Tạo ra một monolithic thay vì một hạt nhân đã được modularized
 - Chạy một cập nhật hạt nhân hoặc dành cho nhà phát triển
 
-## Configuration
+# Configuration
 *Kernel configuration*
 ```bash
 $ cp /boot/config -4.x.x-generic ˜/kernelbuild/[kernel directory]/.config
