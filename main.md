@@ -87,6 +87,11 @@ Trong quá trình biên dịch, bạn có thể gặp phải lỗi do thiếu c�
 ```bash
 $ sudo apt-get install openssl libssl-dev
 ```
+Khi chúng ta tạo systemcall function, cần phải chắc chắc là có dòng này ở `Makefile` trong folder `arch/x86/kernel` 
+
+```bash
+obj-y += sys_name.o #name of syscall object file 
+```
 
 ### What is the meaning of these two stages, namely “make” and “make modules”?
 - **make modules**: Lệnh `make modules` sẽ chỉ biên dịch các modules, để lại các compiled binaries đã biên dịch trong thư mục build. 
@@ -107,3 +112,13 @@ Vì `/usr/include` thuộc quyền sở hữu của root user, và lệnh sudo c
 ### Why we must put -share and -fpic option into gcc command?
 
 Vì mình muốn tạo một file share object, ở đây là `libprocsched.so` cũng như sử dụng shared library này, nên ta cần sử dụng option `-share` và `-fpic` trong gcc (`-share` dùng để generate share lib, conf `-fpic` giúp tạo ra một position independent code với mục đích để sử dụng shared lib).
+
+
+# Reference 
+* https://shanetully.com/2014/04/adding-a-syscall-to-linux-3-14/
+* https://www.gnu.org/prep/standards/html_node/Writing-C.html
+* http://www.tldp.org/LDP/lkmpg/2.6/html/index.html
+* http://duartes.org/gustavo/blog/post/how-the-kernel-manages-your-memory/
+* https://medium.com/@ssreehari/implementing-a-system-call-in-linux-kernel-4-7-1-6f98250a8c38
+* http://www.informit.com/articles/article.aspx?p=368650
+* https://archlinux.org/ 
