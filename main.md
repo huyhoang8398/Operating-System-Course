@@ -5,7 +5,8 @@ date: "2020-05-16"
 titlepage: true
 ...
 
-\newline
+\newpage{}
+
 # I. Prepare Linux Kernel
 
 ## Preparation
